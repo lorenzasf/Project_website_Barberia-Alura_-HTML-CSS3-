@@ -257,37 +257,55 @@ td, th{
 
 @media screen and (max-width: 480px){  /*Dentro de esta MEDIA QUERY podemos crear un estilo visual que incluye pantallas de hasta 480px.  */ 
     
-    /*Media Query de la página Home.html:*/
+    /*Media Query para MÓVIL página Home.html:*/
     
-    h1{
+    h1 {
         text-align: center;
     }
 
-    nav{
+    nav {
         position: static;
+        margin-left: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+        text-align: center;
     }
     
-    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video{
-        width: auto;
+    ul {
+        width: fit-content;
+    }
+
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video {
+        width: 90%;
     }
     
-    .listaDiferenciales, .imagenDiferenciales{
+    .listaDiferenciales, .imagenDiferenciales {
 
         width: 100%;
     }
 
-    /*Media Query de la página Productos.html:*/
+    .imagenDiferenciales {
+        margin-top: 50px
+    }
+
+    /*Media Query para MÓVIL página Productos.html:*/
    
     .productos {
-        display: block;
+        display: contents;
     }
     .productos li {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .copyright {
+        width: 90%;
     }
 
     
-    /*Media Query de la página Contacto.html:*/
+    /*Media Query para MÓVIL página Contacto.html:*/
 
     form {
         display: flex;
@@ -297,7 +315,7 @@ td, th{
       
     .inputPadron,
         select {
-        width: 100%;
+        width: 85%;
         margin-bottom: 20px;
     }
       
@@ -309,15 +327,85 @@ td, th{
         width: 100%;
     }
 
-    .enviar{
+    .enviar {
         width: 50%;
     }
 
     table {
         width: 60%;
         margin-inline: 80px;
-      }
+    }
 
 }
-
     
+      
+
+/* Media Query para TABLET con un ancho de pantalla entre 768px y 1023px: */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /*Media Query para TABLET página de Home.html:*/
+        
+    body {
+        font-size: 14px;
+    }
+        
+    .caja {
+        width: 90%;
+    }
+        
+    nav {
+        position: static;
+        margin-left: 10px;
+    }
+        
+    nav a {
+        font-size: 16px;
+        text-align: center;
+    }
+          
+    .mapaContenido,
+    .principal,
+    .contenidoDiferenciales,
+    .video {
+        width: 90%;
+    }
+        
+    .listaDiferenciales,
+    .imagenDiferenciales {
+        width: 100%;
+    }
+        
+    .imagenDiferenciales {
+        margin-top: 50px;
+    }
+
+    /*Media Query para TABLET página de Productos.html:*/
+
+    .productos {
+        display: contents;
+    }
+
+    .productos li {
+        width: 75%;
+        margin: 20px auto; 
+        margin-left: 95px;   
+    }
+
+
+    /*Media Query para TABLET página de Contacto.html:*/
+
+    .inputPadron {
+        width: 90%;
+    }
+
+    .enviar {
+        width: 50%;
+    }
+
+    table {
+        width: 60%;
+        margin: 50px auto;
+        text-align: center;
+    }
+}
